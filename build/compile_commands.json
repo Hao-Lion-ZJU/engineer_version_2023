@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/haolion/test/rm/engineer_version/build",
+  "command": "/usr/bin/g++    -I/home/haolion/test/rm/engineer_version/$(DIR_INCS) -I/home/haolion/test/rm/engineer_version/utils -isystem /usr/local/include/opencv4 -I/usr/include/eigen3 -isystem /usr/local/include   -O0 -Wall -g2 -ggdb   -std=gnu++11 -o CMakeFiles/task_1.dir/main.cpp.o -c /home/haolion/test/rm/engineer_version/main.cpp",
+  "file": "/home/haolion/test/rm/engineer_version/main.cpp"
+},
+{
+  "directory": "/home/haolion/test/rm/engineer_version/build",
+  "command": "/usr/bin/g++    -I/home/haolion/test/rm/engineer_version/$(DIR_INCS) -I/home/haolion/test/rm/engineer_version/utils -isystem /usr/local/include/opencv4 -I/usr/include/eigen3 -isystem /usr/local/include   -O0 -Wall -g2 -ggdb   -std=gnu++11 -o CMakeFiles/task_1.dir/robot.cpp.o -c /home/haolion/test/rm/engineer_version/robot.cpp",
+  "file": "/home/haolion/test/rm/engineer_version/robot.cpp"
+},
+{
+  "directory": "/home/haolion/test/rm/engineer_version/build",
+  "command": "/usr/bin/g++    -I/home/haolion/test/rm/engineer_version/$(DIR_INCS) -I/home/haolion/test/rm/engineer_version/utils -isystem /usr/local/include/opencv4 -I/usr/include/eigen3 -isystem /usr/local/include   -O0 -Wall -g2 -ggdb   -std=gnu++11 -o CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o -c /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp",
+  "file": "/home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp"
+},
+{
+  "directory": "/home/haolion/test/rm/engineer_version/build",
+  "command": "/usr/bin/g++    -I/home/haolion/test/rm/engineer_version/$(DIR_INCS) -I/home/haolion/test/rm/engineer_version/utils -isystem /usr/local/include/opencv4 -I/usr/include/eigen3 -isystem /usr/local/include   -O0 -Wall -g2 -ggdb   -std=gnu++11 -o CMakeFiles/task_1.dir/utils/record.cpp.o -c /home/haolion/test/rm/engineer_version/utils/record.cpp",
+  "file": "/home/haolion/test/rm/engineer_version/utils/record.cpp"
+},
+{
+  "directory": "/home/haolion/test/rm/engineer_version/build",
+  "command": "/usr/bin/g++    -I/home/haolion/test/rm/engineer_version/$(DIR_INCS) -I/home/haolion/test/rm/engineer_version/utils -isystem /usr/local/include/opencv4 -I/usr/include/eigen3 -isystem /usr/local/include   -O0 -Wall -g2 -ggdb   -std=gnu++11 -o CMakeFiles/task_1.dir/utils/params.cpp.o -c /home/haolion/test/rm/engineer_version/utils/params.cpp",
+  "file": "/home/haolion/test/rm/engineer_version/utils/params.cpp"
+},
+{
+  "directory": "/home/haolion/test/rm/engineer_version/build",
+  "command": "/usr/bin/g++    -I/home/haolion/test/rm/engineer_version/$(DIR_INCS) -I/home/haolion/test/rm/engineer_version/utils -isystem /usr/local/include/opencv4 -I/usr/include/eigen3 -isystem /usr/local/include   -O0 -Wall -g2 -ggdb   -std=gnu++11 -o CMakeFiles/task_1.dir/utils/utils.cpp.o -c /home/haolion/test/rm/engineer_version/utils/utils.cpp",
+  "file": "/home/haolion/test/rm/engineer_version/utils/utils.cpp"
+}
+]
