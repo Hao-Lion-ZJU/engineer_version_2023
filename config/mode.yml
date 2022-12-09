@@ -23,11 +23,15 @@ video_path      : '/home/helloworld/Pictures/Screenshot from 2022-08-03 15-52-37
 # video_path      : '/home/dangwi/code/sources/lhp.mp4'
 # video_path      : '/home/dangwi/code/sources/0319_tuoluo.mp4'
 
+big_template_path : '/home/haolion/test/rm/engineer_version/demo/Big_arrow_template.jpg'
+
+small_template_path : '/home/haolion/test/rm/engineer_version/demo/Small_arrow_template.jpg'
+
 enable_serial   : y
 # 如果要预测，下面show一个别开
 show_source_img : false
-show_debug      : false
-show_pose       : false
+show_debug      : true
+show_pose       : true
 show_predict    : false
 show_digitx     : false
 

@@ -86,24 +86,23 @@ void Rmversion::Imgprocess()
         /* code */
         sprintf(filename, "/home/haolion/test/rm/engineer_version/Image/%d.jpg", i);
         src = imread(filename);
-        arrow_Imgprocess_Ptr->pretreatment(src);
+         arrow_Imgprocess_Ptr->pretreatment(src);
         match_flag = arrow_Imgprocess_Ptr->Arrow_detector(); 
-        PointOfSlot = arrow_Imgprocess_Ptr->get_PointOfPnp();
+        // PointOfSlot = arrow_Imgprocess_Ptr->get_PointOfPnp();
         if(match_flag == PNP_SOLVE)
         {
-            PoseSlover_Ptr->setTarget(PointOfSlot);
-            PoseSlover_Ptr->solve();
+            // PoseSlover_Ptr->setTarget(PointOfSlot);
+            // PoseSlover_Ptr->solve();
         }
-        if(param.debug)
+        if(param.show_debug)
         {
             arrow_Imgprocess_Ptr->Draw_bound();
             arrow_Imgprocess_Ptr->debug_show();
         }
         if(param.show_pose)
         {
-            PoseSlover_Ptr->showPoseInfo();
+            // PoseSlover_Ptr->showPoseInfo();
         }
-        waitKey(0);
     }
     
 #endif

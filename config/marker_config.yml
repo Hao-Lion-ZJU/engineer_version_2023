@@ -8,18 +8,18 @@
 # blue - 2
 Target.color: 0
 
-brightness_threshold: 25
-template_extend_ratio: 0.9
-Gama: 10
+Arrow.brightness_threshold: 40
+Arrow.template_extend_ratio: 0.9
+Arrow.Gama: 10
 #箭头
-rect_min_area: 500
-arrow_min_size: 6
-rect_max_ratio: 5
-mtach_step: 1		#旋转步距角
-score_threshold: 0.6
+Arrow.rect_min_area: 500
+Arrow.arrow_min_size: 6
+Arrow.rect_max_ratio: 5
+Arrow.mtach_step: 1
+Arrow.score_threshold: 0.6
 
 #大小箭头
-arrow_max_lenth: 70
+Arrow.arrow_max_lenth: 100
 
 
 # 枪口补偿

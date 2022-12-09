@@ -16,7 +16,7 @@
 
 #include "Match.hpp"
 #include "opencv2/opencv.hpp"
-#include "alogrithm.hpp"
+#include "../alogrithm/alogrithm.hpp"
 #include "params.hpp"
 #include <glog/logging.h>
 using namespace cv;
@@ -31,6 +31,7 @@ using namespace std;
  */
 void arrow_classifier::Load_Template(const char* big_template_path,const char* small_template_path,Size arrowImgSize)
 {
+    this->arrowImgSize = arrowImgSize;
     Big_arrow_template = imread(big_template_path);
     Small_arrow_template = imread(small_template_path);
     if(Big_arrow_template.empty() || Small_arrow_template.empty())
@@ -38,6 +39,10 @@ void arrow_classifier::Load_Template(const char* big_template_path,const char* s
         LOG(ERROR) << "模板读取失败";
         exit(0);
     }
+    cvtColor(Big_arrow_template, Big_arrow_template, COLOR_RGB2GRAY);
+    threshold(Big_arrow_template, Big_arrow_template,50, 255, cv::THRESH_BINARY);
+    cvtColor(Small_arrow_template, Small_arrow_template, COLOR_RGB2GRAY);
+    threshold(Small_arrow_template, Small_arrow_template,50, 255, cv::THRESH_BINARY);
     //set dstPoints (the same to arrowImgSize, as it can avoid resize arrowImg)
     dstPoints[0] = Point2f(0, 0);
     dstPoints[1] = Point2f(arrowImgSize.width, 0);
@@ -76,6 +81,7 @@ const float arrow_classifier::Arrow_confidence(arrow_info& arrow)
     warpPerspective_mat = getPerspectiveTransform(srcPoints, dstPoints);  // get perspective transform matrix  透射变换矩阵
     warpPerspective(warpPerspective_src, warpPerspective_dst, warpPerspective_mat, arrowImgSize, INTER_NEAREST, BORDER_CONSTANT, Scalar(0)); //warpPerspective to get arrowImage
     warpPerspective_dst.copyTo(arrow.warpPerspective_img); //copyto arrowImg
+    
 
     Mat Template;
     if(arrow.arrow_type == Big)
@@ -87,18 +93,23 @@ const float arrow_classifier::Arrow_confidence(arrow_info& arrow)
         Template = Small_arrow_template;
     }
     auto step = param.arrow_para.mtach_step;
-    double max_score = 0;
+    double value = 0;
     Mat newImg;
     Mat result;
     for (int i = 0; i <= 360 / step; i++)
       {
         newImg = ImageRotate(Template, step * i);
         matchTemplate(warpPerspective_dst, newImg, result, TM_CCOEFF_NORMED);
-        if(result.at<double>(0,0)>max_score)
+        double minval, maxval;
+        Point minloc, maxloc;
+        minMaxLoc(result, &minval, &maxval, &minloc, &maxloc);
+        if(maxval>value)
         {
-            max_score = result.at<double>(0,0);
+            arrow.angle = i;
+            value = maxval;
         }
       }
+      return value;
 }
 
 /************************************************寻找箭头角点**********************************************/
@@ -129,10 +140,14 @@ void arrow_Imgprocess::pretreatment(const Mat &src)
     src.copyTo(Src_Img);
     ImgCenter = Point2f(Src_Img.cols/2, Src_Img.rows/2);
     cvtColor(Src_Img, Gray_Img, COLOR_RGB2GRAY);
+    
 	GammaTransform(Gray_Img, Gray_Img, param.arrow_para.Gama);
-	
+
 	//阈值化
 	threshold(Gray_Img, Bin_Img,param.arrow_para.brightness_threshold, 255, cv::THRESH_BINARY);
+
+    
+
 	//定义椭圆形结构元素，锚点为元素中心点，用于膨胀操作，结构大小为内切3×3矩形的椭圆
 	cv::Mat element = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(7, 7));
 	//开运算，去除白色噪点
@@ -229,8 +244,10 @@ std::vector<Point2f> arrow_Imgprocess::get_PointOfPnp() const
  */
 void arrow_Imgprocess::Draw_bound()
 {
+    arrowDisplay = Src_Img.clone();
     if(!arrows.empty())
     {
+        
         string tmp_str;
         cv::Scalar color = CV_COLOR_YELLOW;
         putText(arrowDisplay, "FOUND"+std::to_string(arrows.size())+"ARROW", Point(100, 50), FONT_HERSHEY_SIMPLEX, 1, CV_COLOR_PINK, 2, 8, false);
@@ -258,4 +275,16 @@ void arrow_Imgprocess::Draw_bound()
 	    }
     }
     
+}
+
+/**
+ * @brief 展示过程图像
+ */
+void arrow_Imgprocess::debug_show()
+{
+    imshow("gray",Gray_Img);
+    imshow("Pre_bin",Pre_Img);
+    imshow("thin",Thin_Img);
+    imshow("result",arrowDisplay);
+    waitKey(0);
 }
