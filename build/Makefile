@@ -520,6 +520,33 @@ ContinuousUpdate/fast:
 	$(MAKE) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
 .PHONY : ContinuousUpdate/fast
 
+Match/Match.o: Match/Match.cpp.o
+
+.PHONY : Match/Match.o
+
+# target to build an object file
+Match/Match.cpp.o:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Match/Match.cpp.o
+.PHONY : Match/Match.cpp.o
+
+Match/Match.i: Match/Match.cpp.i
+
+.PHONY : Match/Match.i
+
+# target to preprocess a source file
+Match/Match.cpp.i:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Match/Match.cpp.i
+.PHONY : Match/Match.cpp.i
+
+Match/Match.s: Match/Match.cpp.s
+
+.PHONY : Match/Match.s
+
+# target to generate assembly for a file
+Match/Match.cpp.s:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Match/Match.cpp.s
+.PHONY : Match/Match.cpp.s
+
 alogrithm/alogrithm.o: alogrithm/alogrithm.cpp.o
 
 .PHONY : alogrithm/alogrithm.o
@@ -547,6 +574,87 @@ alogrithm/alogrithm.cpp.s:
 	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s
 .PHONY : alogrithm/alogrithm.cpp.s
 
+device/camera.o: device/camera.cpp.o
+
+.PHONY : device/camera.o
+
+# target to build an object file
+device/camera.cpp.o:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/camera.cpp.o
+.PHONY : device/camera.cpp.o
+
+device/camera.i: device/camera.cpp.i
+
+.PHONY : device/camera.i
+
+# target to preprocess a source file
+device/camera.cpp.i:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/camera.cpp.i
+.PHONY : device/camera.cpp.i
+
+device/camera.s: device/camera.cpp.s
+
+.PHONY : device/camera.s
+
+# target to generate assembly for a file
+device/camera.cpp.s:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/camera.cpp.s
+.PHONY : device/camera.cpp.s
+
+device/communicator.o: device/communicator.cpp.o
+
+.PHONY : device/communicator.o
+
+# target to build an object file
+device/communicator.cpp.o:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/communicator.cpp.o
+.PHONY : device/communicator.cpp.o
+
+device/communicator.i: device/communicator.cpp.i
+
+.PHONY : device/communicator.i
+
+# target to preprocess a source file
+device/communicator.cpp.i:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/communicator.cpp.i
+.PHONY : device/communicator.cpp.i
+
+device/communicator.s: device/communicator.cpp.s
+
+.PHONY : device/communicator.s
+
+# target to generate assembly for a file
+device/communicator.cpp.s:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/communicator.cpp.s
+.PHONY : device/communicator.cpp.s
+
+device/gpio.o: device/gpio.cpp.o
+
+.PHONY : device/gpio.o
+
+# target to build an object file
+device/gpio.cpp.o:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/gpio.cpp.o
+.PHONY : device/gpio.cpp.o
+
+device/gpio.i: device/gpio.cpp.i
+
+.PHONY : device/gpio.i
+
+# target to preprocess a source file
+device/gpio.cpp.i:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/gpio.cpp.i
+.PHONY : device/gpio.cpp.i
+
+device/gpio.s: device/gpio.cpp.s
+
+.PHONY : device/gpio.s
+
+# target to generate assembly for a file
+device/gpio.cpp.s:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/gpio.cpp.s
+.PHONY : device/gpio.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -573,6 +681,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+pose/slove.o: pose/slove.cpp.o
+
+.PHONY : pose/slove.o
+
+# target to build an object file
+pose/slove.cpp.o:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/pose/slove.cpp.o
+.PHONY : pose/slove.cpp.o
+
+pose/slove.i: pose/slove.cpp.i
+
+.PHONY : pose/slove.i
+
+# target to preprocess a source file
+pose/slove.cpp.i:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/pose/slove.cpp.i
+.PHONY : pose/slove.cpp.i
+
+pose/slove.s: pose/slove.cpp.s
+
+.PHONY : pose/slove.s
+
+# target to generate assembly for a file
+pose/slove.cpp.s:
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/pose/slove.cpp.s
+.PHONY : pose/slove.cpp.s
 
 robot.o: robot.cpp.o
 
@@ -722,12 +857,27 @@ help:
 	@echo "... ExperimentalSubmit"
 	@echo "... ContinuousStart"
 	@echo "... ContinuousUpdate"
+	@echo "... Match/Match.o"
+	@echo "... Match/Match.i"
+	@echo "... Match/Match.s"
 	@echo "... alogrithm/alogrithm.o"
 	@echo "... alogrithm/alogrithm.i"
 	@echo "... alogrithm/alogrithm.s"
+	@echo "... device/camera.o"
+	@echo "... device/camera.i"
+	@echo "... device/camera.s"
+	@echo "... device/communicator.o"
+	@echo "... device/communicator.i"
+	@echo "... device/communicator.s"
+	@echo "... device/gpio.o"
+	@echo "... device/gpio.i"
+	@echo "... device/gpio.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... pose/slove.o"
+	@echo "... pose/slove.i"
+	@echo "... pose/slove.s"
 	@echo "... robot.o"
 	@echo "... robot.i"
 	@echo "... robot.s"

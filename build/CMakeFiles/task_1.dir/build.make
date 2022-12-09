@@ -105,28 +105,28 @@ CMakeFiles/task_1.dir/robot.cpp.o.provides: CMakeFiles/task_1.dir/robot.cpp.o.re
 CMakeFiles/task_1.dir/robot.cpp.o.provides.build: CMakeFiles/task_1.dir/robot.cpp.o
 
 
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o: CMakeFiles/task_1.dir/flags.make
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o: ../alogrithm/alogrithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o -c /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp
+CMakeFiles/task_1.dir/Match/Match.cpp.o: CMakeFiles/task_1.dir/flags.make
+CMakeFiles/task_1.dir/Match/Match.cpp.o: ../Match/Match.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/task_1.dir/Match/Match.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/Match/Match.cpp.o -c /home/haolion/test/rm/engineer_version/Match/Match.cpp
 
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp > CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.i
+CMakeFiles/task_1.dir/Match/Match.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/Match/Match.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/Match/Match.cpp > CMakeFiles/task_1.dir/Match/Match.cpp.i
 
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp -o CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s
+CMakeFiles/task_1.dir/Match/Match.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/Match/Match.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/Match/Match.cpp -o CMakeFiles/task_1.dir/Match/Match.cpp.s
 
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires:
+CMakeFiles/task_1.dir/Match/Match.cpp.o.requires:
 
-.PHONY : CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires
+.PHONY : CMakeFiles/task_1.dir/Match/Match.cpp.o.requires
 
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires
-	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides.build
-.PHONY : CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides
+CMakeFiles/task_1.dir/Match/Match.cpp.o.provides: CMakeFiles/task_1.dir/Match/Match.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Match/Match.cpp.o.provides.build
+.PHONY : CMakeFiles/task_1.dir/Match/Match.cpp.o.provides
 
-CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides.build: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o
+CMakeFiles/task_1.dir/Match/Match.cpp.o.provides.build: CMakeFiles/task_1.dir/Match/Match.cpp.o
 
 
 CMakeFiles/task_1.dir/utils/record.cpp.o: CMakeFiles/task_1.dir/flags.make
@@ -201,24 +201,154 @@ CMakeFiles/task_1.dir/utils/utils.cpp.o.provides: CMakeFiles/task_1.dir/utils/ut
 CMakeFiles/task_1.dir/utils/utils.cpp.o.provides.build: CMakeFiles/task_1.dir/utils/utils.cpp.o
 
 
+CMakeFiles/task_1.dir/pose/slove.cpp.o: CMakeFiles/task_1.dir/flags.make
+CMakeFiles/task_1.dir/pose/slove.cpp.o: ../pose/slove.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/task_1.dir/pose/slove.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/pose/slove.cpp.o -c /home/haolion/test/rm/engineer_version/pose/slove.cpp
+
+CMakeFiles/task_1.dir/pose/slove.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/pose/slove.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/pose/slove.cpp > CMakeFiles/task_1.dir/pose/slove.cpp.i
+
+CMakeFiles/task_1.dir/pose/slove.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/pose/slove.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/pose/slove.cpp -o CMakeFiles/task_1.dir/pose/slove.cpp.s
+
+CMakeFiles/task_1.dir/pose/slove.cpp.o.requires:
+
+.PHONY : CMakeFiles/task_1.dir/pose/slove.cpp.o.requires
+
+CMakeFiles/task_1.dir/pose/slove.cpp.o.provides: CMakeFiles/task_1.dir/pose/slove.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/pose/slove.cpp.o.provides.build
+.PHONY : CMakeFiles/task_1.dir/pose/slove.cpp.o.provides
+
+CMakeFiles/task_1.dir/pose/slove.cpp.o.provides.build: CMakeFiles/task_1.dir/pose/slove.cpp.o
+
+
+CMakeFiles/task_1.dir/device/gpio.cpp.o: CMakeFiles/task_1.dir/flags.make
+CMakeFiles/task_1.dir/device/gpio.cpp.o: ../device/gpio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/task_1.dir/device/gpio.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/device/gpio.cpp.o -c /home/haolion/test/rm/engineer_version/device/gpio.cpp
+
+CMakeFiles/task_1.dir/device/gpio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/device/gpio.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/device/gpio.cpp > CMakeFiles/task_1.dir/device/gpio.cpp.i
+
+CMakeFiles/task_1.dir/device/gpio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/device/gpio.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/device/gpio.cpp -o CMakeFiles/task_1.dir/device/gpio.cpp.s
+
+CMakeFiles/task_1.dir/device/gpio.cpp.o.requires:
+
+.PHONY : CMakeFiles/task_1.dir/device/gpio.cpp.o.requires
+
+CMakeFiles/task_1.dir/device/gpio.cpp.o.provides: CMakeFiles/task_1.dir/device/gpio.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/gpio.cpp.o.provides.build
+.PHONY : CMakeFiles/task_1.dir/device/gpio.cpp.o.provides
+
+CMakeFiles/task_1.dir/device/gpio.cpp.o.provides.build: CMakeFiles/task_1.dir/device/gpio.cpp.o
+
+
+CMakeFiles/task_1.dir/device/camera.cpp.o: CMakeFiles/task_1.dir/flags.make
+CMakeFiles/task_1.dir/device/camera.cpp.o: ../device/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/task_1.dir/device/camera.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/device/camera.cpp.o -c /home/haolion/test/rm/engineer_version/device/camera.cpp
+
+CMakeFiles/task_1.dir/device/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/device/camera.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/device/camera.cpp > CMakeFiles/task_1.dir/device/camera.cpp.i
+
+CMakeFiles/task_1.dir/device/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/device/camera.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/device/camera.cpp -o CMakeFiles/task_1.dir/device/camera.cpp.s
+
+CMakeFiles/task_1.dir/device/camera.cpp.o.requires:
+
+.PHONY : CMakeFiles/task_1.dir/device/camera.cpp.o.requires
+
+CMakeFiles/task_1.dir/device/camera.cpp.o.provides: CMakeFiles/task_1.dir/device/camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/camera.cpp.o.provides.build
+.PHONY : CMakeFiles/task_1.dir/device/camera.cpp.o.provides
+
+CMakeFiles/task_1.dir/device/camera.cpp.o.provides.build: CMakeFiles/task_1.dir/device/camera.cpp.o
+
+
+CMakeFiles/task_1.dir/device/communicator.cpp.o: CMakeFiles/task_1.dir/flags.make
+CMakeFiles/task_1.dir/device/communicator.cpp.o: ../device/communicator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/task_1.dir/device/communicator.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/device/communicator.cpp.o -c /home/haolion/test/rm/engineer_version/device/communicator.cpp
+
+CMakeFiles/task_1.dir/device/communicator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/device/communicator.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/device/communicator.cpp > CMakeFiles/task_1.dir/device/communicator.cpp.i
+
+CMakeFiles/task_1.dir/device/communicator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/device/communicator.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/device/communicator.cpp -o CMakeFiles/task_1.dir/device/communicator.cpp.s
+
+CMakeFiles/task_1.dir/device/communicator.cpp.o.requires:
+
+.PHONY : CMakeFiles/task_1.dir/device/communicator.cpp.o.requires
+
+CMakeFiles/task_1.dir/device/communicator.cpp.o.provides: CMakeFiles/task_1.dir/device/communicator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/device/communicator.cpp.o.provides.build
+.PHONY : CMakeFiles/task_1.dir/device/communicator.cpp.o.provides
+
+CMakeFiles/task_1.dir/device/communicator.cpp.o.provides.build: CMakeFiles/task_1.dir/device/communicator.cpp.o
+
+
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o: CMakeFiles/task_1.dir/flags.make
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o: ../alogrithm/alogrithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o -c /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp
+
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp > CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.i
+
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/haolion/test/rm/engineer_version/alogrithm/alogrithm.cpp -o CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.s
+
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires:
+
+.PHONY : CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires
+
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides.build
+.PHONY : CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides
+
+CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.provides.build: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o
+
+
 # Object files for target task_1
 task_1_OBJECTS = \
 "CMakeFiles/task_1.dir/main.cpp.o" \
 "CMakeFiles/task_1.dir/robot.cpp.o" \
-"CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o" \
+"CMakeFiles/task_1.dir/Match/Match.cpp.o" \
 "CMakeFiles/task_1.dir/utils/record.cpp.o" \
 "CMakeFiles/task_1.dir/utils/params.cpp.o" \
-"CMakeFiles/task_1.dir/utils/utils.cpp.o"
+"CMakeFiles/task_1.dir/utils/utils.cpp.o" \
+"CMakeFiles/task_1.dir/pose/slove.cpp.o" \
+"CMakeFiles/task_1.dir/device/gpio.cpp.o" \
+"CMakeFiles/task_1.dir/device/camera.cpp.o" \
+"CMakeFiles/task_1.dir/device/communicator.cpp.o" \
+"CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o"
 
 # External object files for target task_1
 task_1_EXTERNAL_OBJECTS =
 
 task_1: CMakeFiles/task_1.dir/main.cpp.o
 task_1: CMakeFiles/task_1.dir/robot.cpp.o
-task_1: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o
+task_1: CMakeFiles/task_1.dir/Match/Match.cpp.o
 task_1: CMakeFiles/task_1.dir/utils/record.cpp.o
 task_1: CMakeFiles/task_1.dir/utils/params.cpp.o
 task_1: CMakeFiles/task_1.dir/utils/utils.cpp.o
+task_1: CMakeFiles/task_1.dir/pose/slove.cpp.o
+task_1: CMakeFiles/task_1.dir/device/gpio.cpp.o
+task_1: CMakeFiles/task_1.dir/device/camera.cpp.o
+task_1: CMakeFiles/task_1.dir/device/communicator.cpp.o
+task_1: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o
 task_1: CMakeFiles/task_1.dir/build.make
 task_1: /usr/local/lib/libopencv_ml.so.4.5.1
 task_1: /usr/local/lib/libopencv_highgui.so.4.5.1
@@ -227,6 +357,8 @@ task_1: /usr/local/lib/libopencv_gapi.so.4.5.1
 task_1: /usr/local/lib/libopencv_objdetect.so.4.5.1
 task_1: /usr/local/lib/libopencv_photo.so.4.5.1
 task_1: /usr/local/lib/libglog.so.0.5.0
+task_1: ../device/MVCamera/lib/x64/libMVSDK.so
+task_1: ../device/serial/lib/x64/libserial.a
 task_1: /usr/local/lib/libopencv_videoio.so.4.5.1
 task_1: /usr/local/lib/libopencv_imgcodecs.so.4.5.1
 task_1: /usr/local/lib/libopencv_video.so.4.5.1
@@ -237,7 +369,7 @@ task_1: /usr/local/lib/libopencv_flann.so.4.5.1
 task_1: /usr/local/lib/libopencv_imgproc.so.4.5.1
 task_1: /usr/local/lib/libopencv_core.so.4.5.1
 task_1: CMakeFiles/task_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable task_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/haolion/test/rm/engineer_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable task_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/task_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -247,10 +379,15 @@ CMakeFiles/task_1.dir/build: task_1
 
 CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/main.cpp.o.requires
 CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/robot.cpp.o.requires
-CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires
+CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/Match/Match.cpp.o.requires
 CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/utils/record.cpp.o.requires
 CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/utils/params.cpp.o.requires
 CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/utils/utils.cpp.o.requires
+CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/pose/slove.cpp.o.requires
+CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/device/gpio.cpp.o.requires
+CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/device/camera.cpp.o.requires
+CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/device/communicator.cpp.o.requires
+CMakeFiles/task_1.dir/requires: CMakeFiles/task_1.dir/alogrithm/alogrithm.cpp.o.requires
 
 .PHONY : CMakeFiles/task_1.dir/requires
 

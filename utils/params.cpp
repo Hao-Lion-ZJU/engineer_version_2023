@@ -59,7 +59,7 @@ void Params::loadMode(const string &mode_path)
 
     f["save_video"]      >> save_video;
     f["show_source_img"] >> show_source_img;
-    f["show_target_img"] >> show_target_img;
+    f["show_debug"]      >>  show_debug;
     f["show_pose"]       >> show_pose;
     f["show_predict"]    >> show_predict;
     f["show_digitx"]     >> show_digitx;
@@ -164,7 +164,7 @@ void Params::print() {
     strncpy(s[11]+24, robot_name.c_str(), robot_name.size());
 
     strncpy(s[5]+82, show_source_img ? "TRUE " : "FALSE", 5);
-    strncpy(s[6]+85, debug ? "TRUE " : "FALSE", 5);
+    strncpy(s[6]+85, show_debug ? "TRUE " : "FALSE", 5);
     strncpy(s[7]+84, show_pose ? "TRUE " : "FALSE", 5);
     strncpy(s[8]+81, show_predict ? "TRUE " : "FALSE", 5);
 

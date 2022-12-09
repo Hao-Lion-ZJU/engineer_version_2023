@@ -16,8 +16,8 @@
 
 #pragma once
 
-#ifndef _MATCH_H_
-#define _MATCH_H_
+#ifndef _MATCH_HPP_
+#define _MATCH_HPP_
 
 #include <opencv2/opencv.hpp>
 

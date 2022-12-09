@@ -22,6 +22,7 @@ set ( DIR_INCS
       ./Match
       ./device
       ./pose
+      ./device
       )
 
 include_directories ($(DIR_INCS))
@@ -38,7 +39,10 @@ aux_source_directory (./pose pose_src)
 file(GLOB utils_src utils/*.cpp)
 include_directories(utils)
 
-add_executable(task_1  ${main_src} ${alogrithm_src} ${match_src} ${utils_src} ${pose_src})#${device_src}
+file(GLOB device_src device/*.cpp)
+include_directories(device device/MVCamera/include device/serial/include)
+
+add_executable(task_1  ${main_src}  ${match_src} ${utils_src} ${pose_src} ${device_src} ${alogrithm_src})#
 
 find_package(OpenCV REQUIRED)
 if(OpenCV_FOUND)
@@ -56,6 +60,18 @@ target_link_libraries (task_1 glog::glog)
 # Eigen
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIRS})
+
+
+# static local library
+if (${CMAKE_SYSTEM_PROCESSOR} STREQUAL "aarch64")
+    target_link_libraries(task_1 
+        ${PROJECT_SOURCE_DIR}/device/MVCamera/lib/arm64/libMVSDK.so 
+        ${PROJECT_SOURCE_DIR}/device/serial/lib/arm64/libserial.a)
+elseif (${CMAKE_SYSTEM_PROCESSOR} STREQUAL "x86_64")
+    target_link_libraries(task_1 
+        ${PROJECT_SOURCE_DIR}/device/MVCamera/lib/x64/libMVSDK.so 
+        ${PROJECT_SOURCE_DIR}/device/serial/lib/x64/libserial.a)
+endif()
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

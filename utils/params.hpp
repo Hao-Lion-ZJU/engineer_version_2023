@@ -49,7 +49,7 @@ struct Params
     std::string engine_name;
 
     bool show_source_img;
-    bool show_target_img;
+    bool show_debug;
     bool show_pose;
     bool show_predict;
     bool show_digitx;
