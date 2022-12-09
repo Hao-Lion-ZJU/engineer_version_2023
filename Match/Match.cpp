@@ -197,6 +197,18 @@ Arrow_Flag_e arrow_Imgprocess::Arrow_detector()
             }  
         }
     }
+    if(arrows.size()<3)
+    {
+        Arrow_Flag = CANNOT_SOLVE;
+    }
+    else if(arrows.size()==3)
+    {
+        Arrow_Flag = ANGLE_SOLVE;
+    }
+    else if(arrows.size()>=4)
+    {
+        Arrow_Flag = PNP_SOLVE;
+    }
     return Arrow_Flag;
 }
 
@@ -228,6 +240,7 @@ vector<Point2f> arrow_Imgprocess::Corner_detector(arrow_info& arrow)
 std::vector<Point2f> arrow_Imgprocess::get_PointOfPnp() const
 {
     std::vector<Point2f> PointOfSlot;
+    PointOfSlot.clear();
     for(auto arrow:arrows)
     {
         if(arrow.arrow_type == Small)
@@ -236,6 +249,7 @@ std::vector<Point2f> arrow_Imgprocess::get_PointOfPnp() const
         }
 
     }
+    return PointOfSlot;
 
 }
 

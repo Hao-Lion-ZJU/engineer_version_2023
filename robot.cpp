@@ -88,11 +88,11 @@ void Rmversion::Imgprocess()
         src = imread(filename);
          arrow_Imgprocess_Ptr->pretreatment(src);
         match_flag = arrow_Imgprocess_Ptr->Arrow_detector(); 
-        // PointOfSlot = arrow_Imgprocess_Ptr->get_PointOfPnp();
+        PointOfSlot = arrow_Imgprocess_Ptr->get_PointOfPnp();
         if(match_flag == PNP_SOLVE)
         {
-            // PoseSlover_Ptr->setTarget(PointOfSlot);
-            // PoseSlover_Ptr->solve();
+            PoseSlover_Ptr->setTarget(PointOfSlot);
+            PoseSlover_Ptr->solve();
         }
         if(param.show_debug)
         {
@@ -101,7 +101,7 @@ void Rmversion::Imgprocess()
         }
         if(param.show_pose)
         {
-            // PoseSlover_Ptr->showPoseInfo();
+            PoseSlover_Ptr->showPoseInfo();
         }
     }
     
