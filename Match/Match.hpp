@@ -26,6 +26,13 @@ using namespace cv;
 using namespace std;
 
 
+enum COLOR {
+    GRAY   = 0,
+    BLUE   = 1,
+    RED    = 2,
+    PURPLE = 3,
+};
+
 /**
  * @brief 角标类型
  */

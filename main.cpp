@@ -26,8 +26,12 @@ int main(int argc, char **argv) {
 	FLAGS_logtostderr = true;
 	google::InitGoogleLogging(argv[0]);
 
+
+
     Rmversion rm;
     rm.Init();
     rm.Imgprocess();
+    
+    LOG(INFO) << "Hello, World!";
     return 0;
 }

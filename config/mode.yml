@@ -19,9 +19,9 @@ mv_camera_name  : 'auto'
 # camera_type = 2 时生效
 # 示例: /home/helloworld/source/video.mp4
 #   或  .../images  images下存放jpg或png格式图片（末尾不用加/）
-video_path      : '/home/helloworld/Pictures/Screenshot from 2022-08-03 15-52-37.png'
+# video_path      : '/home/helloworld/Pictures/Screenshot from 2022-08-03 15-52-37.png'
 # video_path      : '/home/dangwi/code/sources/lhp.mp4'
-# video_path      : '/home/dangwi/code/sources/0319_tuoluo.mp4'
+video_path      : '/home/haolion/test/rm/videosave/recording.mp4'
 
 big_template_path : '/home/haolion/test/rm/engineer_version/demo/Big_arrow_template.jpg'
 

@@ -17,9 +17,21 @@
 #include "robot.hpp"
 #include <glog/logging.h>
 #include "params.hpp"
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 
 #define picture
 // #define Video
+
+
+bool RUNNING = true;
+
+// ------------ 线 程 同 步 锁 ------------
+//                  pkg2post
+// pre(get frame)  ----------> post(to uart)
+static mutex pkg2post_mtx;
+static condition_variable cond2post;
 
 /**
  * @brief Construct a new Rmversion object
@@ -28,6 +40,9 @@ Rmversion::Rmversion()
 {
     arrow_Imgprocess_Ptr = make_unique<arrow_Imgprocess>();
     PoseSlover_Ptr = make_unique<PoseSlover>();
+    Communicator_Ptr = make_unique<Communicator>(param.enable_serial);
+    Camera_Ptr = make_unique<MVCamera>(param.mv_camera_name);
+    Record_Ptr = make_unique<Record>(param.save_video);
 }
 
 /**
@@ -37,6 +52,9 @@ Rmversion::~Rmversion()
 {
     arrow_Imgprocess_Ptr.release();
     PoseSlover_Ptr.release();
+    Communicator_Ptr.release();
+    Camera_Ptr.release();
+    Record_Ptr.release();
 }
 
 /**
@@ -112,11 +130,77 @@ void Rmversion::Imgprocess()
 /**
  * @brief 读取图像到缓冲区
  */
-void Rmversion::Graber()
+[[noreturn]] void Rmversion::Graber()
 {
+
+    Mat src_img;
+
+    while( RUNNING ) {
+
+        // TIME_BEGIN()
+        bool status = Camera_Ptr->getFrame(src_img);
+        // TIME_END("get Frame")
+        if ( false == status ) {
+            LOG(WARNING) << "Get Image Failed !";
+            this_thread::sleep_for(chrono::milliseconds(10));
+            continue;
+        }
+        if ( param.save_video )
+            Record_Ptr->push(src_img);
+
+        { // 将数据发送至推理
+            unique_lock<mutex> lk(pkg2post_mtx);
+
+            pkg2post.time_stamp = chrono::system_clock::now();
+            pkg2post.robot = g_robot;
+            src_img.copyTo(pkg2post.src_img);
+
+            pkg2post.updated = true;
+            lk.unlock();
+            // 唤醒推理线程
+            cond2post.notify_one();
+        }
+    }
+    this_thread::sleep_for(chrono::milliseconds(20));
+    cond2post.notify_all();
 
 }
 
+
+/**
+ * @brief 
+ */
+[[noreturn]] void Rmversion::Receiver()
+{
+    uint8_t buffer[12] = {0};
+    while ( RUNNING ) {
+        /// receive
+        int num_bytes = Communicator_Ptr->receive(buffer, 7);
+        if (num_bytes <= 0) {
+            this_thread::sleep_for(chrono::milliseconds(1));
+            continue;
+        }
+
+        if(buffer[0] == 0x7f && buffer[1] == 0x7f && buffer[2] == 0x7f && buffer[3] == 0x7f && buffer[4] == 0x7f && buffer[5] == 0x7f)
+        {
+            LOG(FATAL) << "-------------------------------------shutdown!!!";
+            system("sudo shutdown now");
+        }
+        else{
+            int16_t pitch_angle = buffer[0] << 8 | buffer[1];
+            int16_t yaw_angle   = buffer[2] << 8 | buffer[3];
+            int16_t move_speed  = buffer[4] << 8 | buffer[5];
+            int     mode        = buffer[6];
+
+            g_robot.yaw         = yaw_angle / 100.f;
+            g_robot.pitch       = pitch_angle / 100.f;
+
+            // 串口中的比特位（敌方颜色） 蓝0 红1
+            param.target_color  = (mode & 0x80) ? COLOR::RED : COLOR::BLUE;
+
+        }
+    }
+}
 
 /**
  * @brief 重新设置窗口位置
